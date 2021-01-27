@@ -68,9 +68,13 @@ In the following, I will create a few variables. These variables were selected b
 + VCF0843: Defense spending scale
 
 <img src="../figs/vcf0875.png" width="300">
+
 <img src="../figs/vcf0104.png" width="300">
+
 <img src="../figs/vcf0894.png" width="300">
+
 <img src="../figs/vcf0870.png" width="300">
+
 <img src="../figs/vcf0843.png" width="300">
 
 First let's look at our data. One advantage of using the SPSS SAV data is that the values are *labelled*. By converting labelled data to factor, you can easily reveal the responses encoded by numbers. We selected four variables for subsequent analysis and save the filtered data sets to the `output` folder.
@@ -129,13 +133,14 @@ ggplot(anes_to_most_important_national_problem_year,
   scale_fill_brewer(palette="Set3")+
   labs(title="How did different gender groups think What was the most important national problem \n over the years?")
 ```
+
 There are three most significant variance, agriculture, economics, and foreign affairs/national defense.
 
-Economics problem of male's option increases from less than 10% in 1960 to 50%, as the peak in 1980 becoming a major issue of the US society, then maintain a stable value ~50% and decreases to ~20% in 2000. Female's option also has a similar trend in these years. U.S. economy experienced a deep recession in the 1980s due to disinflationary monetary policy, and increased oil price rafter Iranian Revolution.([Ref](https://bancroft.berkeley.edu/ROHO/projects/debt/1980srecession.html)) It could be the main reason to observe the peak point.
+Economics problem of male's option increases from less than 10% in 1960 to 50%, as the peak in 1980 becoming a major issue of the US society, then maintain a stable value ~50% and decreases to ~20% in 2000. Female's option also has a similar trend in these years. U.S. economy experienced a deep recession in the 1980s due to disinflationary monetary policy, and increased oil price rafter Iranian Revolution. ([Ref](https://bancroft.berkeley.edu/ROHO/projects/debt/1980srecession.html)) It could be the main reason to observe the peak point.
 
-However, foreign affairs/national defense (simplified as defense) problem of male's option decreases from ~60% in 1960 to 5%, but increases to 30% and maintaining the value from 1980 to 1984 before decreasing after 1984. Female's option also has a similar trend. It is aligned with Reagan's foreign policy "peace through strength" and increased defense spending of 35%.([Ref](https://www.whitehouse.gov/about-the-white-house/presidents/ronald-reagan/)).
+However, foreign affairs/national defense (simplified as defense) problem of male's option decreases from ~60% in 1960 to 5%, but increases to 30% and maintaining the value from 1980 to 1984 before decreasing after 1984. Female's option also has a similar trend. It is aligned with Reagan's foreign policy "peace through strength" and increased defense spending of 35%. ([Ref](https://www.whitehouse.gov/about-the-white-house/presidents/ronald-reagan/)).
 
-Even welfare program has a trend to be more and more important approaching 2000. However, it has not dominated until 1992. Female's option also has a similar trend. This point aligns with Bill Clinton's Welfare Reform in the 1990s.([Ref](https://www.history.com/news/clinton-1990s-welfare-reform-facts))
+Even welfare program has a trend to be more and more important approaching 2000. However, it has not dominated until 1992. Female's option also has a similar trend. This point aligns with Bill Clinton's Welfare Reform in the 1990s. ([Ref](https://www.history.com/news/clinton-1990s-welfare-reform-facts))
 
 ```{r}
 ggplot(anes_to_most_important_national_problem_year, 
@@ -180,6 +185,7 @@ ggplot(anes_to_welfare_programs_year,
   theme(axis.text.x = element_text(angle = 90))+ 
   labs(title="What is the different gender groups' attitudes towards federal spending on welfare programs \n over the years, showing by trend?")
 ```
+
 There are three year's data for welfare programs, as shown in the above two figures. I do not discuss much on the trend since the insufficient data points. However, it is clear that both male and female prefer decreased federal spending on welfare, at least no increasing, during 1992 and 2000. the male has ~10% more proportion compared with female to have the option of decrease welfare spending.
 
 ## 3.3 For different genders, what is the attitude towards economy performance in past year?
@@ -214,6 +220,7 @@ ggplot(anes_to_economy_past_year,
   theme(axis.text.x = element_text(angle = 90))+ 
   labs(title="What is the different gender groups' attitudes towards economy performance in past year \n over the years, showing by trend?")
 ```
+
 If "Better" and "Stayed same" are considered as "not worse", "not worse" and "worse" have the opposite trend clearly shown in the figure above. It can also be observed difference that male is more optimistic with the past economy while female is more pessimistic. The difference is 10% for both. "Worse" can represent the trend of people's attitude as the extreme points at 1984 and 1992, which aligns the extreme economics points for the figure of the most important national problem.
 
 ## 3.4 For different genders, what is the attitude towards defense spending scale?
@@ -239,6 +246,7 @@ ggplot(anes_to_defense_spending_scale_year,
   scale_fill_manual(values = c("#ffffff", "#3ACBE8", "#1CA3DE", "#0D85D8", "#F6DA62", "#F4B757", "#F3734C", "#000000"))+
   labs(title="What is the different gender groups' attitudes towards defense spending scale?")
 ```
+
 The 1-4 are grouped as "general decrease" while 5-7 are grouped as "general increase". This division is more representative than the original subdivision. I focus on the blue-yellow boundary prop value to observe the domination. Male's option shows the attitude of decreasing defense spending scale from 1980 to 75% in 1992. Then a decreased attitude to ~60% in 2000. Female has a similar trend. This extreme value point could be due to the US advantages in Cold War and winning of Cold War at 1992. ([Ref](https://www.mercatus.org/publications/government-spending/us-federal-budget-restraint-1990s-success-story)).
 
 ```{r}
@@ -249,7 +257,8 @@ ggplot(anes_to_defense_spending_scale_year,
   theme(axis.text.x = element_text(angle = 90))+ 
   labs(title="What is the different gender groups' attitudes towards defense spending scale \n over the years, showing by trend?")
 ```
-Focus on 1.Greatly decrease defense spending and 7.Greatly increase defense spending. Female is more than ~10% compared with male to decrease defense spending scale. However, the male is more than ~10% compared with male to increase defense spending scale. Female tends to be more conservative in defense compared with the male in extreme conditions options such as two "Greatly" here.
+
+Focus on 1. Greatly decrease defense spending and 7. Greatly increase defense spending. Female is more than ~10% compared with male to decrease defense spending scale. However, the male is more than ~10% compared with male to increase defense spending scale. Female tends to be more conservative in defense compared with the male in extreme conditions options such as two "Greatly" here.
 
 # 4. Conclusion
 The investigation focuses on gender differences of attitudes towards the question, what is the most important national problem. The significant patterns of economics, foreign affairs/national defense, and welfare program are explained both in data and politics. These three variables are zoomed in to do a further detailed investigation. Generally speaking, male and female has no much difference for the given variables. However, male cares more about economics while female cares more about welfare.
