@@ -1,5 +1,5 @@
 ---
-title: "Different Altitudes of Male and Female in Important National Problem in US Presidential Election"
+title: "Different Attitudes of Male and Female in Important National Problem in US Presidential Election"
 output:
   pdf_document: default
   html_document:
@@ -8,7 +8,7 @@ output:
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 
 
 # 1. Introduction
-So many investigations have been focused on grand topics categorized by voters' wealth, education, race, Republicans/Democrats. However, what about a small angle, gender, to see special altitudes from male and female towards a particular question, what is the most important national problem. This question reflects their most concerns and affects their choice and decisions on other topics related to the presidential election.
+So many investigations have been focused on grand topics categorized by voters' wealth, education, race, Republicans/Democrats. However, what about a small angle, gender, to see special attitudes from male and female towards a particular question, what is the most important national problem. This question reflects their most concerns and affects their choice and decisions on other topics related to the presidential election.
 
 The data source is Time Series Cumulative Data from The American National Election Studies (ANES). Any year without valid data and data with NA are excluded in the analysis.
 
@@ -214,7 +214,7 @@ ggplot(anes_to_economy_past_year,
   theme(axis.text.x = element_text(angle = 90))+ 
   labs(title="What is the different gender groups' attitudes towards economy performance in past year \n over the years, showing by trend?")
 ```
-If "Better" and "Stayed same" are considered as "not worse", "not worse" and "worse" have the opposite trend clearly shown in the figure above. It can also be observed difference that male is more optimistic with the past economy while female is more pessimistic. The difference is 10% for both. "Worse" can represent the trend of people's altitude as the extreme points at 1984 and 1992, which aligns the extreme economics points for the figure of the most important national problem.
+If "Better" and "Stayed same" are considered as "not worse", "not worse" and "worse" have the opposite trend clearly shown in the figure above. It can also be observed difference that male is more optimistic with the past economy while female is more pessimistic. The difference is 10% for both. "Worse" can represent the trend of people's attitude as the extreme points at 1984 and 1992, which aligns the extreme economics points for the figure of the most important national problem.
 
 ## 3.4 For different genders, what is the attitude towards defense spending scale?
 
@@ -239,7 +239,7 @@ ggplot(anes_to_defense_spending_scale_year,
   scale_fill_manual(values = c("#ffffff", "#3ACBE8", "#1CA3DE", "#0D85D8", "#F6DA62", "#F4B757", "#F3734C", "#000000"))+
   labs(title="What is the different gender groups' attitudes towards defense spending scale?")
 ```
-The 1-4 are grouped as "general decrease" while 5-7 are grouped as "general increase". This division is more representative than the original subdivision. I focus on the blue-yellow boundary prop value to observe the domination. Male's option shows the altitude of decreasing defense spending scale from 1980 to 75% in 1992. Then a decreased altitude to ~60% in 2000. Female has a similar trend. This extreme value point could be due to the US advantages in Cold War and winning of Cold War at 1992. ([Ref](https://www.mercatus.org/publications/government-spending/us-federal-budget-restraint-1990s-success-story)).
+The 1-4 are grouped as "general decrease" while 5-7 are grouped as "general increase". This division is more representative than the original subdivision. I focus on the blue-yellow boundary prop value to observe the domination. Male's option shows the attitude of decreasing defense spending scale from 1980 to 75% in 1992. Then a decreased attitude to ~60% in 2000. Female has a similar trend. This extreme value point could be due to the US advantages in Cold War and winning of Cold War at 1992. ([Ref](https://www.mercatus.org/publications/government-spending/us-federal-budget-restraint-1990s-success-story)).
 
 ```{r}
 ggplot(anes_to_defense_spending_scale_year, 
@@ -252,4 +252,4 @@ ggplot(anes_to_defense_spending_scale_year,
 Focus on 1.Greatly decrease defense spending and 7.Greatly increase defense spending. Female is more than ~10% compared with male to decrease defense spending scale. However, the male is more than ~10% compared with male to increase defense spending scale. Female tends to be more conservative in defense compared with the male in extreme conditions options such as two "Greatly" here.
 
 # 4. Conclusion
-The investigation focuses on gender differences of altitudes towards the question, what is the most important national problem. The significant patterns of economics, foreign affairs/national defense, and welfare program are explained both in data and politics. These three variables are zoomed in to do a further detailed investigation. Generally speaking, male and female has no much difference for the given variables. However, male cares more about economics while female cares more about welfare.
+The investigation focuses on gender differences of attitudes towards the question, what is the most important national problem. The significant patterns of economics, foreign affairs/national defense, and welfare program are explained both in data and politics. These three variables are zoomed in to do a further detailed investigation. Generally speaking, male and female has no much difference for the given variables. However, male cares more about economics while female cares more about welfare.
